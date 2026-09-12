@@ -11,13 +11,15 @@ Er zit geen bouwstap in: het zijn losse HTML-bestanden met één stylesheet. Ope
 | Bestand | Wat het is |
 | --- | --- |
 | `index.html` | home: diensten, werkwijze, waarom, klanten |
-| `klanten.html` | klantenlijst en foto's van werk en materieel |
-| `over-ons.html` | wat er gewassen wordt en hoe een offerte tot stand komt |
-| `contact.html` | adres, telefoon, e-mail, KvK en de kaart |
+| `klanten/index.html` | klantenlijst met logo's en foto's van werk en materieel |
+| `over-ons/index.html` | wat er gewassen wordt en hoe een offerte tot stand komt |
+| `contact/index.html` | adres, telefoon, e-mail, KvK en de kaart |
+| `klanten.html` e.d. | doorverwijzers van de oude adressen naar de nieuwe map |
 | `404.html` | foutpagina (GitHub Pages pakt deze automatisch) |
 | `stijl.css` | de hele vormgeving, licht en donker |
 | `script.js` | thema-knop, mobiel menu, meelopende kop, blokken die in beeld komen |
 | `afbeeldingen/` | foto's van de oude site |
+| `afbeeldingen/logos/` | logo's van de klanten, van hun eigen website gehaald |
 
 ## Wat er nieuw is
 
@@ -32,8 +34,29 @@ Er zit geen bouwstap in: het zijn losse HTML-bestanden met één stylesheet. Ope
 - Zoekmachines: eigen `title`/`description` per pagina, Open Graph-tags en
   `LocalBusiness`-structuurdata op de homepagina.
 
-De bestandsnamen (`index.html`, `klanten.html`, `over-ons.html`, `contact.html`) zijn
-gelijk aan die van de oude site, dus bestaande links blijven werken.
+## Adressen
+
+De pagina's staan als `index.html` in een eigen map, dus de adressen zijn
+`/klanten/`, `/over-ons/` en `/contact/` zonder `.html`. De oude adressen
+(`/klanten.html` en zo) bestaan nog als kleine doorverwijspagina's met een canonical,
+zodat bestaande links en zoekresultaten blijven werken. Die bestandjes mogen weg zodra
+de oude site echt uit de lucht is.
+
+## Logo's van de klanten
+
+De logo's in `afbeeldingen/logos/` komen van de websites van de bedrijven zelf. Ze staan
+op een witte tegel, want de meeste zijn donker en zouden anders wegvallen in het donkere
+thema. Het logo van Van der Kooy was wit (bedoeld voor hun eigen donkere kop); daarvan is
+de letterkleur naar hun huisblauw `#0055A4` gezet zodat het op wit leesbaar is.
+
+Twee dingen om te weten:
+
+- **Auto Ambacht Zoetermeer** heeft geen website meer: `autoambacht.nl` bestaat niet meer
+  als domein. Die tegel heeft daarom geen logo en geen link, alleen de naam. Het bedrijf
+  bestaat nog wel, als Vakgarage met een Facebook-pagina; als Ferry daarheen wil linken,
+  kan dat er zo in.
+- Logo's van klanten gebruik je met hun medeweten. Ferry heeft ze naar eigen zeggen als
+  klant, maar het blijft netjes om even te melden dat ze op de site staan.
 
 ## Hosting via GitHub Pages
 
