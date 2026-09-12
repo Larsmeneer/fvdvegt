@@ -41,7 +41,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;background:var(--paper);color:var(--text);
@@ -327,4 +327,53 @@ div.klant:hover{border-color:var(--line);transform:none;box-shadow:none}
   }
   .belbalk svg{width:18px;height:18px}
   body{padding-bottom:78px}
+}
+
+/* ============================================================
+   Mobiel: staat bewust onderaan, zodat deze regels winnen
+   ============================================================ */
+@media (max-width:900px){
+  /* de knoppenrij hoort rechts; het menu is hier absoluut gepositioneerd
+     en duwt dus zelf niets meer opzij */
+  .nav-cta{margin-left:auto}
+  .nav{min-height:64px;gap:12px}
+  .thema-knop,.menu-knop{width:44px;height:44px}
+  .nav-links a{min-height:46px;display:flex;align-items:center}
+  /* telefoonnummer in het uitgeklapte menu */
+  .nav-links .bel-in-menu{
+    display:flex;gap:9px;margin-top:8px;padding:12px;border-radius:10px;
+    background:var(--accent);color:#fff;justify-content:center;font-weight:700;
+  }
+  .nav-links .bel-in-menu svg{width:18px;height:18px}
+}
+.bel-in-menu{display:none}
+
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding-inline:18px}
+  section{padding-block:clamp(38px,9vw,54px)}
+  .sectie-kop{margin-bottom:26px}
+  .brand .b2{font-size:16px}
+  .brand .mark{width:34px;height:34px}
+  .hero-grid{padding-block:44px 52px;gap:30px}
+  .hero-meta{gap:14px 22px;margin-top:26px;padding-top:20px}
+  .hero-acties .btn,.oproep-acties .btn{width:100%}
+  .paginakop{padding-block:34px 38px}
+  .dienst-tekst{gap:12px}
+  .dienst-beeld{min-height:180px}
+  .kaart{padding:22px}
+  .oproep{padding:26px 22px;border-radius:16px}
+  .kaartje iframe{min-height:300px}
+  .galerij{gap:10px}
+  .voet-onder{flex-direction:column;gap:6px}
+  .voet ul{gap:4px}
+  .voet ul a{display:inline-block;padding-block:6px}
+  .lead a{display:inline-block;padding-block:4px}
+}
+
+@media (max-width:380px){
+  .brand .b1{font-size:9.5px;letter-spacing:.12em}
+  .brand .b2{font-size:15px}
+  .klant{padding:14px 15px;gap:11px}
+  .klant b{font-size:15px}
 }
